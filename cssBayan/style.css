@@ -106,6 +106,10 @@ body {
     align-items: center;
     animation: fadeIn 1.5s;
   }
+
+  .bayan-input:hover ~ .bayan-title-container .bayan-icon-more {
+    transform: rotateZ(-180deg);
+  }
 }
 
 @media (max-width: 768px) {
