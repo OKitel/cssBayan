@@ -120,9 +120,10 @@ body {
   .bayan {
     max-width: 100%;
   }
-
-  .bayan-icon-more {
-    display: inline-block;
+  @media (hover: none) {
+    .bayan-icon-more {
+      display: inline-block;
+    }
   }
 }
 
