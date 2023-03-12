@@ -87,8 +87,8 @@ body {
 
 .bayan-img {
   max-width: 80%;
+  max-height: 80%;
   margin-bottom: 1rem;
-  height: fit-content;
 }
 
 /* Media queries */
@@ -107,5 +107,33 @@ body {
     justify-content: center;
     align-items: center;
     animation: fadeIn 1.5s;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .bayan {
+    max-width: 100%;
+  }
+
+  .bayan-icon-more {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .bayan {
+    max-width: 60%;
+  }
+
+  .bayan-img-container {
+    height: 40rem;
   }
 }
