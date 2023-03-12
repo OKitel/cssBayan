@@ -44,9 +44,7 @@ body {
 }
 
 .bayan-input {
-  appearance: none;
-  -webkit-appearance: none;
-  position: absolute;
+  display: none;
 }
 
 .bayan-input:checked ~ .bayan-img-container {
