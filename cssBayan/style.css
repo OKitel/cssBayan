@@ -61,10 +61,24 @@ body {
   display: flex;
   max-width: inherit;
   justify-content: center;
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .bayan-input:checked ~ .bayan-title-container .bayan-icon-more {
   transform: rotateZ(-180deg) translateY(+50%);
+}
+
+.bayan-input:checked ~ .bayan-title-container .bayan-title {
+  color: #0a1d96;
 }
 
 .bayan-img-container {
@@ -73,4 +87,5 @@ body {
 
 .bayan-img {
   max-width: 400px;
+  margin-bottom: 20px;
 }
