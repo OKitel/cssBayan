@@ -65,6 +65,13 @@ body {
   animation: fadeIn 1.5s;
 }
 
+.bayan-item:hover > .bayan-img-container {
+  display: flex;
+  max-width: inherit;
+  justify-content: center;
+  animation: fadeIn 1.5s;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
