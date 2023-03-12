@@ -58,7 +58,7 @@ body {
   justify-content: center;
 }
 
-.bayan-input:checked ~ .bayan-title-container > .bayan-icon-more {
+.bayan-input:checked ~ .bayan-title-container .bayan-icon-more {
   transform: rotateZ(-180deg) translateY(+50%);
 }
 
