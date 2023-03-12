@@ -74,12 +74,9 @@ body {
   animation: fadeIn 1.5s;
 }
 
-.bayan-img-container:active > .bayan-img-container {
-  display: flex;
-  max-width: inherit;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 1.5s;
+.bayan-img-container:active > .bayan-img {
+  transition: 0.2s;
+  scale: 95%;
 }
 
 @keyframes fadeIn {
@@ -102,7 +99,7 @@ body {
 .bayan-img-container {
   display: none;
   cursor: pointer;
-  height: 400px;
+  height: 25rem;
 }
 
 .bayan-img {
