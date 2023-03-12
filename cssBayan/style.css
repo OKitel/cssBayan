@@ -30,21 +30,16 @@ body {
   border-bottom: 0.1rem solid #0a1d96;
 }
 
-.bayan-title-container {
-  position: relative;
-}
 .bayan-title {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 1rem;
   cursor: pointer;
 }
 
 .bayan-icon-more {
   display: none;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
   transition: all 0.4s ease;
 }
 
@@ -80,7 +75,7 @@ body {
 }
 
 .bayan-input:checked ~ .bayan-title-container .bayan-icon-more {
-  transform: rotateZ(-180deg) translateY(+50%);
+  transform: rotateZ(-180deg);
 }
 
 .bayan-input:checked ~ .bayan-title-container .bayan-title {
