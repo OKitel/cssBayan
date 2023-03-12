@@ -34,6 +34,7 @@ body {
 }
 
 .bayan-icon-more {
+  display: none;
   position: absolute;
   top: 50%;
   right: 15px;
@@ -44,6 +45,10 @@ body {
 .bayan:hover {
   color: #d914c8;
   cursor: pointer;
+}
+
+.bayan:hover .bayan-icon-more {
+  display: inline-block;
 }
 
 .bayan-input {
