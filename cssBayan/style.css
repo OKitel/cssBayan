@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
 }
 
@@ -60,6 +58,14 @@ body {
   scale: 95%;
 }
 
+.bayan-item:has(.bayan-img-container:active)
+  .bayan-title-container
+  .bayan-title,
+.bayan-input ~ .bayan-title-container:active .bayan-title,
+.bayan-input:checked ~ .bayan-title-container:active .bayan-title {
+  color: #0a1d96;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -74,7 +80,7 @@ body {
 }
 
 .bayan-input:checked ~ .bayan-title-container .bayan-title {
-  color: #0a1d96;
+  color: #ff9925;
 }
 
 .bayan-img-container {
