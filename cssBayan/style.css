@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  background-color: #f1f1f1;
+  color: #0a1d96;
+}
+
+/* Bayan css */
+
+.bayan {
+  max-width: 40%;
+  margin: 1rem auto;
+  background-color: #fbfafa;
+  -webkit-box-shadow: 0.7rem 0.7rem 2.1rem -0.2rem rgb(66 68 90);
+  -moz-box-shadow: 0.7rem 0.7rem 2.1rem -0.2rem rgb(66 68 90);
+  box-shadow: 0.7rem 0.7rem 2.1rem -0.2rem rgb(66 68 90);
+  border-radius: 0.5rem;
+  padding: 0 1rem 1rem;
+}
+
+.bayan-item {
+  border-bottom: 0.1rem solid #0a1d96;
+}
+
+.bayan-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+
+.bayan-icon-more {
+  display: none;
+  transition: all 0.4s ease;
+}
+
+.bayan-input {
+  display: none;
+}
+
+.bayan-input:checked ~ .bayan-img-container {
+  display: flex;
+  max-width: inherit;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.5s;
+}
+
+.bayan-img-container:active > .bayan-img {
+  transition: 0.2s;
+  scale: 95%;
+}
+
+.bayan-item:has(.bayan-img-container:active)
+  .bayan-title-container
+  .bayan-title,
+.bayan-input ~ .bayan-title-container:active .bayan-title,
+.bayan-input:checked ~ .bayan-title-container:active .bayan-title {
+  color: #0a1d96;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bayan-input:checked ~ .bayan-title-container .bayan-icon-more {
+  transform: rotateZ(-180deg);
+}
+
+.bayan-input:checked ~ .bayan-title-container .bayan-title {
+  color: #ff9925;
+}
+
+.bayan-img-container {
+  display: none;
+  cursor: pointer;
+  height: 25rem;
+}
+
+.bayan-img {
+  max-width: 80%;
+  max-height: 80%;
+  margin-bottom: 1rem;
+}
+
+/* Media queries */
+
+@media (hover: hover) {
+  .bayan:hover {
+    color: #ff9925;
+    cursor: pointer;
+  }
+  .bayan:hover .bayan-icon-more {
+    display: inline-block;
+  }
+  .bayan-item:hover .bayan-img-container {
+    display: flex;
+    max-width: inherit;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s;
+  }
+
+  .bayan-input:hover ~ .bayan-title-container .bayan-icon-more {
+    transform: rotateZ(-180deg);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .bayan {
+    max-width: 100%;
+  }
+  @media (hover: none) {
+    .bayan-icon-more {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .bayan {
+    max-width: 60%;
+  }
+
+  .bayan-img-container {
+    height: 40rem;
+  }
+}
